@@ -1,0 +1,76 @@
+main {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: subgrid;
+
+  .section-team {
+    padding: 10rem 1rem 7.5rem 1rem;
+    background-color: $color-white;
+    grid-column: center-start / center-end;
+    justify-content: center;
+   
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20rem, 25rem));
+    gap: 3rem;
+  }
+
+  .section-services {
+    padding: 10rem 1rem 7.5rem 1rem;
+    background-color: rgba($color-primary-light, .2);
+    grid-column: center-start / center-end;
+   
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(40rem, 2fr)) 1fr;
+    gap: 3rem;
+    align-items: start;
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr 70% 1fr;
+    }
+  }
+ 
+  .section-lookbook {
+    padding: 15rem 1rem 7.5rem 1rem;
+    grid-column: center-start / center-end;
+    justify-content: center;
+    background-color: rgba($color-primary-light, .2);
+
+    display: grid;
+    grid-template-columns: .5fr repeat(4, minmax(20rem, 1.3fr)) .5fr;
+    grid-template-rows: min-content 7fr .5fr 7fr .5fr .5fr 7fr repeat(3, .5fr);
+    gap: 1.5rem;
+
+    @media screen and (max-width: 1000px){
+      grid-template-columns: 1fr repeat(4, minmax(19rem, 1.3fr)) 1fr;
+    }
+
+    @media screen and (max-width: 900px){
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 5fr 1fr repeat(3, 5fr 1fr 1fr);
+      padding: 10rem 2rem;
+    }
+
+    @media screen and (max-width: 700px){
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 5fr 1fr);
+      padding: 6rem 1.5rem;
+    }
+
+  }
+
+  .section-contact {
+    padding: 0 0 10rem 0;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(70rem, 70vw) 1fr;
+  }
+
+  .section-about {
+    grid-column: full-start / full-end;
+    margin-bottom: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(40rem, 65rem)) 1fr;
+  }
+}

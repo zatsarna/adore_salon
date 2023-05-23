@@ -1,0 +1,31 @@
+.btn {
+  display: block;
+  transition: all .3s;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+  }
+  &:active {
+    outline: none;
+    transform: translateY(0);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+  }
+  
+}
+
+.primary__btn {
+  padding: 1rem 3rem;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  &:hover,
+  &:active {
+    color: $color-black;
+    box-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+  }
+}

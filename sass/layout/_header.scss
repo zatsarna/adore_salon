@@ -1,0 +1,13 @@
+.header {
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+  z-index: 1;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
